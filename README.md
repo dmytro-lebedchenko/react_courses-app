@@ -48,21 +48,21 @@ Additional tasks:
 
 # Project structure
 ## Home page
-![Home page](./src/readme/preview/video-on-card-hover.gif)
-![Home page](./src/readme/preview/responsive-home-page.gif)
+![Home page](./readme/preview/video-on-card-hover.gif)
+![Home page](./readme/preview/responsive-home-page.gif)
 
 ## Course page
-![Course page](./src/readme/preview/video-lessons-page.gif)
-![Course page](./src/readme/preview/responsive-courses-page.gif)
+![Course page](./readme/preview/video-lessons-page.gif)
+![Course page](./readme/preview/responsive-courses-page.gif)
 
 ## Not Found page
-![Not Found page](./src/readme/preview/not-found-page.gif)
+![Not Found page](./readme/preview/not-found-page.gif)
 
 # How to run my project locally:
   - npm i
   - npm start
   - tab will be opened automatically in your browser
 
-If you'll have a problem with blocking CORSin your browser, you can install the [Chrome plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
-And turn it on, as on the screenshot below.
-![CORS issue](./src/readme/preview/cors_issue.jpeg)
+If you'll have a problem with blocking CORSin your browser, you can install the [Chrome plugin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) .
+And don't forget to turn it on, as on the screenshot below.
+![CORS issue](./readme/preview/cors_issue.jpeg)

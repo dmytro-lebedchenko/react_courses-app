@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import Hls from 'hls.js';
+import { debounce } from 'lodash';
 import {
   useEffect,
   useMemo,
@@ -59,6 +60,10 @@ export const Lesson: React.FC = () => {
 
     navigate({ search: newParams });
   };
+
+  const handleDebounceTime = debounce((time: number) => {
+    setCurrentTime(time);
+  }, 1000);
 
   const handleClick = (currentLesson: LessonType) => {
     const video = videoRef.current;
@@ -135,11 +140,11 @@ export const Lesson: React.FC = () => {
 
       pauseListener = () => {
         setIsPlaying(false);
-        setCurrentTime(video.currentTime);
+        handleDebounceTime(video.currentTime);
       };
 
       timeUpdateListener = () => {
-        setCurrentTime(video.currentTime);
+        handleDebounceTime(video.currentTime);
       };
 
       video.addEventListener('play', playListener);

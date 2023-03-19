@@ -1,0 +1,18 @@
+@import "./styles/main.scss";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+
+  @extend %body-text;
+  color: $color-primary;
+}
+
+.container {
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

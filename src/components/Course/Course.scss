@@ -1,0 +1,23 @@
+@import "../../styles/main.scss";
+
+.course {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  border-bottom: 1px solid $color-elements;
+
+  &__main {
+    @extend %big-text;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+  }
+}

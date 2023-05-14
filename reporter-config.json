@@ -1,0 +1,15 @@
+{
+  "reporterEnabled": "mochawesome",
+  "mochawesomeReporterOptions": {
+    "reportDir": "cypress/results",
+    "reportFilename": "mochawesome.json",
+    "quiet": true,
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "reporterOptions": {
+    "mochaFile": "cypress/results/results-[hash].xml",
+    "toConsole": true
+  }
+}

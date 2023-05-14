@@ -5,7 +5,7 @@
     "plugin:react/jsx-runtime"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react" , "react-hooks", "import"],
+  "plugins": ["@typescript-eslint", "react" , "react-hooks", "import", "cypress"],
   "rules": {
     "import/order": [
       "error",

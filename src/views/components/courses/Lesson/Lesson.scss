@@ -1,0 +1,125 @@
+@import "../../../styles/main.scss";
+
+.lesson {
+  display: flex;
+  flex-direction: column;
+
+  @include onDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.player {
+  position: relative;
+  margin-bottom: 40px;
+  padding-right: 16px;
+  width: 100%;
+
+  @include onDesktop {
+    width: 700px;
+  }
+
+  &:hover &__description {
+    opacity: 1;
+    box-shadow: 0 3px 13px $color-shadow-primary;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__video {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__description {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    padding: 10px;
+    opacity: 0;
+
+    color: $color-primary;
+    border: 2px solid $color-secondary;
+    border-radius: 10px;
+    background-color: $color-white;
+    transition: all 0.5s;
+    cursor: default;
+  }
+}
+
+.playlist {
+  @include onDesktop {
+    height: 448px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    width: 100%;
+
+    @include onDesktop {
+      margin-bottom: 0;
+      width: 380px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+
+    @extend %body-text;
+    border: 1px solid $color-elements;
+    background-color: $color-white;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &--dark {
+      background-color: $color-black;
+
+      &:hover .playlist__item-title--dark {
+        color: $color-primary;
+      }
+    }
+
+    &:hover {
+      background-color: $color-elements;
+    }
+
+    &--active {
+      background-color: $color-green;
+
+      &-dark {
+        background-color: $color-green-dark;
+      }
+    }
+
+    &--disabled {
+      background-color: $color-grey;
+      cursor: not-allowed;
+    }
+  }
+
+  &__item-icon {
+    @include squareSize(32px);
+    padding-right: 24px;
+  }
+
+  &__item-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: $color-primary;
+
+    &--dark {
+      color: $color-white;
+    }
+  }
+}

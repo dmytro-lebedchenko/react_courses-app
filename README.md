@@ -20,6 +20,7 @@
   - BEM
   - FETCH, API
   - localStorage
+  - Jest and Cypress tests
 
 # Project task
 The application should contains two pages:
@@ -45,15 +46,19 @@ Additional tasks:
 - work through errors from the API;
 - adaptive for the mobile version;
 - video loading animation;
+- create Light and Dark Mode for the interface;
+- create tests using Jest and Cypress, and generate a Mochaawesome test report at the end;
 
 # Project structure
 ## Home page
 ![Home page](./readme/preview/video-on-card-hover.gif)
 ![Home page](./readme/preview/responsive-home-page.gif)
+![Home page](./readme/preview/darkmode-home-page.gif)
 
 ## Course page
 ![Course page](./readme/preview/video-lessons-page.gif)
 ![Course page](./readme/preview/responsive-courses-page.gif)
+![Course page](./readme/preview/darkmode-courses-page.gif)
 
 ## Not Found page
 ![Not Found page](./readme/preview/not-found-page.gif)

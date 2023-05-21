@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTE_PATH } from '../../../../services/app/consts';
 import { LogoType } from '../../../../data/types/models';
+import { ROUTE_PATH } from '../../../../services/app/consts';
 
 type Props = {
   type: LogoType;

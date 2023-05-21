@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+
 import { useAppSelector } from '../../../../services/app/hooks';
 import { Logo } from '../../ui/Logo';
 import { ThemeToggler } from '../../widgets/ThemeToggler';
@@ -9,9 +10,8 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={classNames(
-        'header', {
-        'header--dark': isDarkMode
+      className={classNames('header', {
+        'header--dark': isDarkMode,
       })}
     >
       <Logo type={isDarkMode ? 'big-dark' : 'big'} />
@@ -19,4 +19,4 @@ export const Header: React.FC = () => {
       <ThemeToggler />
     </header>
   );
-}
+};

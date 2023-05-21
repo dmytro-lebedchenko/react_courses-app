@@ -14,11 +14,11 @@
     "delete:reports": "rm cypress/results/* mochawesome-report/* || true",
     "prereport": "npm run delete:reports",
     "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
-    "test": "npm run jest && npm run report && npx marge cypress"
+    "test": "npm run jest && npm run report && npx marge --showFailed cypress"
   },
   "dependencies": {
     "@mate-academy/eslint-config-react-typescript": "^1.0.11",
-    "@reduxjs/toolkit": "^1.9.2",
+    "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@types/jest": "^29.5.1",
     "@vitejs/plugin-basic-ssl": "^1.0.1",

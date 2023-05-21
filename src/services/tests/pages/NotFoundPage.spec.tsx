@@ -3,6 +3,7 @@ import {
   render,
   RenderResult,
 } from '@testing-library/react';
+
 import { NotFoundPage } from '../../../views/pages/NotFoundPage';
 
 describe('"NotFoundPage" page', () => {

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Link, useLocation } from 'react-router-dom';
 
-import { useAppSelector } from '../../../../services/app/hooks';
 import { IconType } from '../../../../data/types/enums';
+import { useAppSelector } from '../../../../services/app/hooks';
 import { Icon } from '../../ui/Icon';
 import './ToTopButton.scss';
 
@@ -21,9 +21,7 @@ export const ToTopButton: React.FC = () => {
   return (
     <Link
       to={`${location.pathname}`}
-      className={classNames(
-        'footer__button-top',
-        'button-top', {
+      className={classNames('footer__button-top', 'button-top', {
         'button-top--dark': isDarkMode,
       })}
       type="button"
@@ -38,8 +36,7 @@ export const ToTopButton: React.FC = () => {
         type={isDarkMode
           ? IconType.ARROW_UP_DARK
           : IconType.ARROW_UP}
-        addClassName={classNames(
-          'button-top__icon', {
+        addClassName={classNames('button-top__icon', {
           'button-top__icon--dark': isDarkMode,
         })}
       />

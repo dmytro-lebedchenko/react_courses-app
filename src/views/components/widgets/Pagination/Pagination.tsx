@@ -5,10 +5,10 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
-import { useAppSelector } from '../../../../services/app/hooks';
-import { ITEMS_ON_PAGE } from '../../../../services/app/consts';
-import { ButtonType } from '../../../../data/types/models';
 import { IconType } from '../../../../data/types/enums';
+import { ButtonType } from '../../../../data/types/models';
+import { ITEMS_ON_PAGE } from '../../../../services/app/consts';
+import { useAppSelector } from '../../../../services/app/hooks';
 import { getSearchWith } from '../../../../services/utils/searchHelper';
 import { Icon } from '../../ui/Icon';
 import './Pagination.scss';
@@ -47,7 +47,7 @@ export const Pagination: React.FC<Props> = ({ length }) => {
 
       case !disabledLeftButton && isDarkMode:
         return IconType.ARROW_LEFT_DARK;
-  
+
       default:
       case !disabledLeftButton && !isDarkMode:
         return IconType.ARROW_LEFT;
@@ -61,7 +61,7 @@ export const Pagination: React.FC<Props> = ({ length }) => {
 
       case !disabledRightButton && isDarkMode:
         return IconType.ARROW_RIGHT_DARK;
-  
+
       default:
       case !disabledRightButton && !isDarkMode:
         return IconType.ARROW_RIGHT;
@@ -135,8 +135,7 @@ export const Pagination: React.FC<Props> = ({ length }) => {
       <ul className="pagination">
         <button
           type="button"
-          className={classNames(
-            'pagination__button', {
+          className={classNames('pagination__button', {
             'pagination__button--dark': isDarkMode,
           })}
           data-testid="pagination-left"
@@ -151,11 +150,12 @@ export const Pagination: React.FC<Props> = ({ length }) => {
             <button
               key={pageNumber}
               type="button"
-              className={classNames(
-                'pagination__item', {
+              className={classNames('pagination__item', {
                 'pagination__item--dark': isDarkMode,
-                'pagination__item--is-active': !isDarkMode && +page === pageNumber,
-                'pagination__item--dark-is-active': isDarkMode && +page === pageNumber,
+                'pagination__item--is-active':
+                  !isDarkMode && +page === pageNumber,
+                'pagination__item--dark-is-active':
+                  isDarkMode && +page === pageNumber,
               })}
               onClick={() => handlePageClick(pageNumber)}
             >
@@ -166,8 +166,7 @@ export const Pagination: React.FC<Props> = ({ length }) => {
 
         <button
           type="button"
-          className={classNames(
-            'pagination__button', {
+          className={classNames('pagination__button', {
             'pagination__button--dark': isDarkMode,
           })}
           data-testid="pagination-right"

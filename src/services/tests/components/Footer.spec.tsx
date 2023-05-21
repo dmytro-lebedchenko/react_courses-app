@@ -4,7 +4,9 @@ import {
   screen,
 } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
+import { store } from '../../app/store';
 import { Footer } from '../../../views/components/common/Footer';
 
 describe('"Footer" component', () => {
@@ -12,9 +14,11 @@ describe('"Footer" component', () => {
 
   beforeEach(() => {
     wrapper = render(
-      <BrowserRouter>
-        <Footer />
-      </BrowserRouter>,
+      <Provider store={store}>
+        <BrowserRouter>
+          <Footer />
+        </BrowserRouter>
+      </Provider>,
     );
   });
 

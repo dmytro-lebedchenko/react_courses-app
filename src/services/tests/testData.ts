@@ -2,7 +2,7 @@ import {
   CourseDetails,
   Courses,
   LessonType,
-} from "../../data/types/models";
+} from '../../data/types/models';
 
 export const testCourses: Courses[] = [
   {

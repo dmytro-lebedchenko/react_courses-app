@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { useSearchParams } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
+import { store } from '../../app/store';
 import { Pagination } from '../../../views/components/widgets/Pagination';
 
 jest.mock('react-router-dom', () => ({
@@ -23,7 +25,11 @@ describe('"Pagination" component', () => {
 
     (useSearchParams as jest.Mock).mockReturnValue([mockSearchParams]);
 
-    render(<Pagination length={length} />);
+    render(
+      <Provider store={store}>
+        <Pagination length={length} />
+      </Provider>
+    );
 
     const paginationList = screen.getByRole('list');
     const items = screen.getAllByRole('button', { name: /[0-9]+/i });
@@ -38,7 +44,11 @@ describe('"Pagination" component', () => {
 
     (useSearchParams as jest.Mock).mockReturnValue([mockSearchParams]);
 
-    render(<Pagination length={length} />);
+    render(
+      <Provider store={store}>
+        <Pagination length={length} />
+      </Provider>
+    );
 
     const paginationList = screen.getByRole('list');
     const items = screen.getAllByRole('button', { name: /[0-9]+/i });
@@ -53,7 +63,11 @@ describe('"Pagination" component', () => {
 
     (useSearchParams as jest.Mock).mockReturnValue([mockSearchParams]);
 
-    render(<Pagination length={length} />);
+    render(
+      <Provider store={store}>
+        <Pagination length={length} />
+      </Provider>
+    );
 
     const leftButton = screen.getByTestId('pagination-left');
 
@@ -66,7 +80,11 @@ describe('"Pagination" component', () => {
 
     (useSearchParams as jest.Mock).mockReturnValue([mockSearchParams]);
 
-    render(<Pagination length={length} />);
+    render(
+      <Provider store={store}>
+        <Pagination length={length} />
+      </Provider>
+    );
 
     const rightButton = screen.getByTestId('pagination-right');
 
@@ -79,7 +97,11 @@ describe('"Pagination" component', () => {
 
     (useSearchParams as jest.Mock).mockReturnValue([mockSearchParams]);
 
-    render(<Pagination length={length} />);
+    render(
+      <Provider store={store}>
+        <Pagination length={length} />
+      </Provider>
+    );
 
     const leftButton = screen.getByTestId('pagination-left');
 
@@ -92,7 +114,11 @@ describe('"Pagination" component', () => {
 
     (useSearchParams as jest.Mock).mockReturnValue([mockSearchParams]);
 
-    render(<Pagination length={length} />);
+    render(
+      <Provider store={store}>
+        <Pagination length={length} />
+      </Provider>
+    );
 
     const rightButton = screen.getByTestId('pagination-right');
 

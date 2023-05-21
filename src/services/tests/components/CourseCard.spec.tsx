@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
-import { store } from '../../../services/app/store';
 import { CourseCard } from '../../../views/components/courses/CourseCard';
+import { store } from '../../app/store';
 import { testCourse } from '../testData';
 
 describe('"CourseCard" component', () => {

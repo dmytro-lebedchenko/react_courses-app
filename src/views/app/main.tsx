@@ -9,9 +9,9 @@ import {
 
 import { App } from './App';
 import { store } from '../../services/app/store';
-import { NotFoundPage } from '../pages/NotFoundPage';
-import { HomePage } from '../pages/HomePage';
 import { CoursePage } from '../pages/CoursePage';
+import { HomePage } from '../pages/HomePage';
+import { NotFoundPage } from '../pages/NotFoundPage';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);

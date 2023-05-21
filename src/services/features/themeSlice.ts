@@ -16,7 +16,7 @@ const themeSlice = createSlice({
       ...state,
       isDarkMode: action.payload,
     }),
-  }
+  },
 });
 
 export default themeSlice.reducer;

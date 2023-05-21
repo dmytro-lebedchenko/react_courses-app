@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
+import { ROUTE_PATH } from '../../../../services/app/consts';
+import { useAppSelector, useWindowSize } from '../../../../services/app/hooks';
 import { Logo } from '../../ui/Logo';
 import { ToTopButton } from '../../widgets/ToTopButton';
-import { useAppSelector, useWindowSize } from '../../../../services/app/hooks';
-import { ROUTE_PATH } from '../../../../services/app/consts';
 import './Footer.scss';
 
 export const Footer: React.FC = () => {
@@ -32,9 +32,8 @@ export const Footer: React.FC = () => {
 
         <Link
           to={ROUTE_PATH.social.github}
-          className={classNames(
-            'footer__link', {
-            'footer__link--dark': isDarkMode
+          className={classNames('footer__link', {
+            'footer__link--dark': isDarkMode,
           })}
           target="_blank"
           rel="noreferrer"

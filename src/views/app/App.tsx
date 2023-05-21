@@ -4,8 +4,8 @@ import { Outlet } from 'react-router';
 
 import { useAppDispatch, useAppSelector } from '../../services/app/hooks';
 import { coursesInit } from '../../services/features/coursesSlice';
-import { Header } from '../components/common/Header';
 import { Footer } from '../components/common/Footer';
+import { Header } from '../components/common/Header';
 import './App.scss';
 
 export const App: React.FC = () => {
@@ -17,11 +17,10 @@ export const App: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(
-      'App', {
+    <div className={classNames('App', {
       'App--dark': isDarkMode,
-      },
-    )} >
+    })}
+    >
       <Header />
 
       <main>

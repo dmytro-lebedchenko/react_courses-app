@@ -4,9 +4,9 @@ export const BASE_URL = 'https://api.wisey.app/api/v1/core/preview-courses';
 
 export const ROUTE_PATH = {
   logo: {
-    big: '../../../dist/images/icons/logo.svg',
-    bigDark: '../../../dist/images/icons/logo-dark.svg',
-    small: '../../../dist/images/icons/logo-small.svg',
+    big: '../../../public/images/icons/logo.svg',
+    bigDark: '../../../public/images/icons/logo-dark.svg',
+    small: '../../../public/images/icons/logo-small.svg',
   },
   social: {
     github: 'https://github.com/dmytro-lebedchenko',

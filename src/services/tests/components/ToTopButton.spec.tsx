@@ -4,7 +4,9 @@ import {
   RenderResult,
 } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
+import { store } from '../../app/store';
 import { ToTopButton } from '../../../views/components/widgets/ToTopButton';
 
 describe('"ToTopButton" component', () => {
@@ -13,9 +15,11 @@ describe('"ToTopButton" component', () => {
 
   beforeEach(() => {
     wrapper = render(
-      <MemoryRouter>
-        <ToTopButton />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter>
+          <ToTopButton />
+        </MemoryRouter>
+      </Provider>,
     );
 
     toTopButton = wrapper.getByTestId('to-top-button');

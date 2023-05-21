@@ -10,11 +10,7 @@ type Props = {
 
 export const Icon: React.FC<Props> = ({ type, addClassName }) => (
   <span
-    className={classNames(
-      'icon',
-      type,
-      addClassName,
-    )}
+    className={classNames('icon', type, addClassName)}
     data-testid={type}
   />
 );

@@ -18,6 +18,9 @@ describe('"CourseList" component', () => {
       courses: {
         courses: testCourses,
       },
+      theme: {
+        isDarkMode: false,
+      }
     });
   });
 

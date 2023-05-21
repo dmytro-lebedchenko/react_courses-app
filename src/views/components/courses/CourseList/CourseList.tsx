@@ -5,11 +5,11 @@ import {
 } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { useAppSelector } from '../../../../services/app/hooks';
-import { ITEMS_ON_PAGE } from '../../../../services/app/consts';
 import { Courses } from '../../../../data/types/models';
-import { CourseCard } from '../CourseCard';
+import { ITEMS_ON_PAGE } from '../../../../services/app/consts';
+import { useAppSelector } from '../../../../services/app/hooks';
 import { Pagination } from '../../widgets/Pagination';
+import { CourseCard } from '../CourseCard';
 import './CourseList.scss';
 
 export const CourseList: React.FC = () => {

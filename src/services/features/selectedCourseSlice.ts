@@ -3,8 +3,9 @@ import {
   PayloadAction,
   createAsyncThunk,
 } from '@reduxjs/toolkit';
-import { CourseDetails } from '../../data/types/models';
+
 import { getCourseDetails } from '../../data/api/getCourses';
+import { CourseDetails } from '../../data/types/models';
 
 type State = {
   selectedCourse: CourseDetails | null;

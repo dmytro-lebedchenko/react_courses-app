@@ -22,7 +22,7 @@ export const ThemeToggler: React.FC = () => {
   };
 
   return (
-    <div className='theme-toggler'>
+    <div className="theme-toggler">
       <DarkModeSwitch
         checked={isDarkMode}
         onChange={handleChange}
@@ -30,4 +30,4 @@ export const ThemeToggler: React.FC = () => {
       />
     </div>
   );
-}
+};

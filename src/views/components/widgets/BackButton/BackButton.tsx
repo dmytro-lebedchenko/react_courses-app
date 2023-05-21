@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { useAppSelector } from '../../../../services/app/hooks';
 
 import { IconType } from '../../../../data/types/enums';
+import { useAppSelector } from '../../../../services/app/hooks';
 import { Icon } from '../../ui/Icon';
 import './BackButton.scss';
 
@@ -12,8 +12,7 @@ export const BackButton: React.FC = () => {
   return (
     <Link
       to="/"
-      className={classNames(
-        'back-button', {
+      className={classNames('back-button', {
         'back-button--dark': isDarkMode,
       })}
       type="button"
@@ -29,4 +28,4 @@ export const BackButton: React.FC = () => {
       Back
     </Link>
   );
-}
+};
